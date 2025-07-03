@@ -24,7 +24,7 @@ This system is built on a **relational database** architecture with a clean Wind
 ---
 
 ## 📄 System Design Document  
-Want to learn more about the design strategy and database structure?  
+Want to learn more about the design process and database structure?  
 👉 [View the full PDF here](docs/LAKESIDE_ESCAPES_DESIGN_PDF.pdf)
 
 ---
