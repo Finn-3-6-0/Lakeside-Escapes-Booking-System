@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44EEF33F-04BC-4166-B2FB-F684BC6E7C3F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LaksideEscapesBookingSystem</RootNamespace>
+    <AssemblyName>LaksideEscapesBookingSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlXml" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AverageLenghtOfStay.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AverageLenghtOfStay.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BookingDal.cs" />
+    <Compile Include="BookingDatbaseDataSetMonthlyREV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingDatbaseDataSetMonthlyREV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BookingDatbaseDataSetMonthlyREVENUE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingDatbaseDataSetMonthlyREVENUE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BookingDatbaseDataSetMostPopPods.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingDatbaseDataSetMostPopPods.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BookingDatbaseDataSetTest.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingDatbaseDataSetTest.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BookingTable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingTable.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BookingViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingViewer.Designer.cs">
+      <DependentUpon>BookingViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseDal.cs" />
+    <Compile Include="CourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseForm.Designer.cs">
+      <DependentUpon>CourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Courses.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Courses.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetMonthlyRevenue.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMonthlyRevenue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetMostPopCourses.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMostPopCourses.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetMostPopPods.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMostPopPods.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetMR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMR.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetRevenueByMonth.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetRevenueByMonth.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GuestDAL.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuestForm.Designer.cs">
+      <DependentUpon>GuestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuestTable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuestTable.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="guestTable1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>guestTable1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="guestTableDGV2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>guestTableDGV2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="guestTableFull.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>guestTableFull.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HubForm.Designer.cs">
+      <DependentUpon>HubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Bookings.cs" />
+    <Compile Include="Models\Courses.cs" />
+    <Compile Include="Models\Guests.cs" />
+    <Compile Include="Models\Pods.cs" />
+    <Compile Include="MostPopularBookingTime.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MostPopularBookingTime.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MostPopularPod.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MostPopularPod.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PodDal.cs" />
+    <Compile Include="PodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PodForm.Designer.cs">
+      <DependentUpon>PodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pods.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pods.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="updatedBookingTable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>updatedBookingTable.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ValidationClass.cs" />
+    <EmbeddedResource Include="BookingViewer.resx">
+      <DependentUpon>BookingViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseForm.resx">
+      <DependentUpon>CourseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuestForm.resx">
+      <DependentUpon>GuestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HubForm.resx">
+      <DependentUpon>HubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monthlyRevenueReport.rdlc" />
+    <EmbeddedResource Include="PodForm.resx">
+      <DependentUpon>PodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
+    <EmbeddedResource Include="Report6.rdlc" />
+    <EmbeddedResource Include="Report7.rdlc" />
+    <None Include="AverageLenghtOfStay.xsc">
+      <DependentUpon>AverageLenghtOfStay.xsd</DependentUpon>
+    </None>
+    <None Include="AverageLenghtOfStay.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AverageLenghtOfStay.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AverageLenghtOfStay.xss">
+      <DependentUpon>AverageLenghtOfStay.xsd</DependentUpon>
+    </None>
+    <None Include="BookingDatbaseDataSetMonthlyREV.xsc">
+      <DependentUpon>BookingDatbaseDataSetMonthlyREV.xsd</DependentUpon>
+    </None>
+    <None Include="BookingDatbaseDataSetMonthlyREV.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookingDatbaseDataSetMonthlyREV.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BookingDatbaseDataSetMonthlyREV.xss">
+      <DependentUpon>BookingDatbaseDataSetMonthlyREV.xsd</DependentUpon>
+    </None>
+    <None Include="BookingDatbaseDataSetMonthlyREVENUE.xsc">
+      <DependentUpon>BookingDatbaseDataSetMonthlyREVENUE.xsd</DependentUpon>
+    </None>
+    <None Include="BookingDatbaseDataSetMonthlyREVENUE.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookingDatbaseDataSetMonthlyREVENUE.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BookingDatbaseDataSetMonthlyREVENUE.xss">
+      <DependentUpon>BookingDatbaseDataSetMonthlyREVENUE.xsd</DependentUpon>
+    </None>
+    <None Include="BookingDatbaseDataSetMostPopPods.xsc">
+      <DependentUpon>BookingDatbaseDataSetMostPopPods.xsd</DependentUpon>
+    </None>
+    <None Include="BookingDatbaseDataSetMostPopPods.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookingDatbaseDataSetMostPopPods.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BookingDatbaseDataSetMostPopPods.xss">
+      <DependentUpon>BookingDatbaseDataSetMostPopPods.xsd</DependentUpon>
+    </None>
+    <None Include="BookingDatbaseDataSetTest.xsc">
+      <DependentUpon>BookingDatbaseDataSetTest.xsd</DependentUpon>
+    </None>
+    <None Include="BookingDatbaseDataSetTest.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookingDatbaseDataSetTest.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BookingDatbaseDataSetTest.xss">
+      <DependentUpon>BookingDatbaseDataSetTest.xsd</DependentUpon>
+    </None>
+    <None Include="BookingTable.xsc">
+      <DependentUpon>BookingTable.xsd</DependentUpon>
+    </None>
+    <None Include="BookingTable.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookingTable.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BookingTable.xss">
+      <DependentUpon>BookingTable.xsd</DependentUpon>
+    </None>
+    <None Include="Courses.xsc">
+      <DependentUpon>Courses.xsd</DependentUpon>
+    </None>
+    <None Include="Courses.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Courses.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Courses.xss">
+      <DependentUpon>Courses.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMonthlyRevenue.xsc">
+      <DependentUpon>DataSetMonthlyRevenue.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMonthlyRevenue.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMonthlyRevenue.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetMonthlyRevenue.xss">
+      <DependentUpon>DataSetMonthlyRevenue.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMostPopCourses.xsc">
+      <DependentUpon>DataSetMostPopCourses.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMostPopCourses.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMostPopCourses.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetMostPopCourses.xss">
+      <DependentUpon>DataSetMostPopCourses.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMostPopPods.xsc">
+      <DependentUpon>DataSetMostPopPods.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMostPopPods.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMostPopPods.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetMostPopPods.xss">
+      <DependentUpon>DataSetMostPopPods.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMR.xsc">
+      <DependentUpon>DataSetMR.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMR.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMR.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetMR.xss">
+      <DependentUpon>DataSetMR.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetRevenueByMonth.xsc">
+      <DependentUpon>DataSetRevenueByMonth.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetRevenueByMonth.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetRevenueByMonth.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetRevenueByMonth.xss">
+      <DependentUpon>DataSetRevenueByMonth.xsd</DependentUpon>
+    </None>
+    <None Include="GuestTable.xsc">
+      <DependentUpon>GuestTable.xsd</DependentUpon>
+    </None>
+    <None Include="GuestTable.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GuestTable.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GuestTable.xss">
+      <DependentUpon>GuestTable.xsd</DependentUpon>
+    </None>
+    <None Include="guestTable1.xsc">
+      <DependentUpon>guestTable1.xsd</DependentUpon>
+    </None>
+    <None Include="guestTable1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>guestTable1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="guestTable1.xss">
+      <DependentUpon>guestTable1.xsd</DependentUpon>
+    </None>
+    <None Include="guestTableDGV2.xsc">
+      <DependentUpon>guestTableDGV2.xsd</DependentUpon>
+    </None>
+    <None Include="guestTableDGV2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>guestTableDGV2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="guestTableDGV2.xss">
+      <DependentUpon>guestTableDGV2.xsd</DependentUpon>
+    </None>
+    <None Include="guestTableFull.xsc">
+      <DependentUpon>guestTableFull.xsd</DependentUpon>
+    </None>
+    <None Include="guestTableFull.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>guestTableFull.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="guestTableFull.xss">
+      <DependentUpon>guestTableFull.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="Model2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model2.edmx.diagram">
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </None>
+    <None Include="MostPopularBookingTime.xsc">
+      <DependentUpon>MostPopularBookingTime.xsd</DependentUpon>
+    </None>
+    <None Include="MostPopularBookingTime.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MostPopularBookingTime.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MostPopularBookingTime.xss">
+      <DependentUpon>MostPopularBookingTime.xsd</DependentUpon>
+    </None>
+    <None Include="MostPopularPod.xsc">
+      <DependentUpon>MostPopularPod.xsd</DependentUpon>
+    </None>
+    <None Include="MostPopularPod.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MostPopularPod.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MostPopularPod.xss">
+      <DependentUpon>MostPopularPod.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Pods.xsc">
+      <DependentUpon>Pods.xsd</DependentUpon>
+    </None>
+    <None Include="Pods.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pods.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Pods.xss">
+      <DependentUpon>Pods.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\BookingDatbaseEntities.datasource" />
+    <None Include="Properties\DataSources\MostPopularPod.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="updatedBookingTable.xsc">
+      <DependentUpon>updatedBookingTable.xsd</DependentUpon>
+    </None>
+    <None Include="updatedBookingTable.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>updatedBookingTable.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="updatedBookingTable.xss">
+      <DependentUpon>updatedBookingTable.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BookingDatbase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BookingDatbase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>BookingDatbase.mdf</DependentUpon>
+    </Content>
+    <Content Include="Model2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model2.Context.cs</LastGenOutput>
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model2.edmx</DependentUpon>
+      <LastGenOutput>Model2.cs</LastGenOutput>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\LOGO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
