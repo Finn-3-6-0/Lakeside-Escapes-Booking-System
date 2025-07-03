@@ -4,7 +4,7 @@
 ---
 
 ## 💡 Why I Built This  
-Tasked with a school project were a lodge’s outdated system could no longer meet the demands of its growing, experience-focused model. To help Lakeside Lodge run at peak efficiency and recover lost profits, I developed a modern solution that:
+Tasked with a school project where a lodge’s outdated system could no longer meet the demands of its growing, experience-focused model. To help Lakeside Lodge run at peak efficiency and recover lost profits, I developed a modern solution that:
 
 - 📅 Tracks each customer’s pod stay duration  
 - 💰 Ensures deposit payments are handled accurately  
